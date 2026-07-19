@@ -1,0 +1,1 @@
+const express = require('express');\nconst router = express.Router();\n\nrouter.get('/', (req, res) => {\n  res.json({\n    status: 'healthy',\n    timestamp: new Date().toISOString(),\n    uptime: process.uptime(),\n  });\n});\n\nmodule.exports = router;\n
